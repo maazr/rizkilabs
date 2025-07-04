@@ -3,11 +3,29 @@
     <title>Testsite</title>
   </head>
   <body>
-    <h1 align="center">My first github site</h1>
-    <br>
-    <br>
-    <h2>
-    <p align="center">Hello world! from Rizki Labs in NJ</p>
-    </h2>
+    <div align="center">
+      <h1 align="center">My first github site</h1>
+      <br>
+      <br>
+      <h4><p id="date-display"></p></h4>
+      <br> 
+      <h2>
+      <p align="center">Hello world! from Rizki Labs in NJ</p>
+      </h2>
+    </div>
+    <script>
+  // Get the current date
+  const today = new Date();
+
+  // Format the date (optional, you can customize this)
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = today.toLocaleDateString(undefined, options);
+
+  // Get the HTML element to display the date
+  const dateElement = document.getElementById("date-display");
+
+  // Display the formatted date in the HTML element
+  dateElement.innerHTML = formattedDate;
+</script>
   </body>
 </html>
